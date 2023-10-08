@@ -12,7 +12,6 @@ const ll MOD = 998244353; //const ll MOD = 1e9+7;
 #define rep(i,n) for(ll i=0;i<(ll)(n);i++)
 #define rep1(i,n) for(ll i=1;i<=(ll)(n);i++)
 #define REP(i,n,m) for(ll i=(ll)(n);i<=(ll)(m);i++)
-// #define
 #define all(x) x.begin(),x.end()
 #define rall(x) x.rbegin(),x.rend()
 // priority_queue<型, vector<型>, greater<型>> q; //小さい順
