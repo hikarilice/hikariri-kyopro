@@ -1,9 +1,10 @@
 
 // グリッドを時計回りに90°回転させる
-void rotate(vector<string> x){
+// x = rotate(x); みたいに使う
+vector<string> rotate(vector<string> x){
     auto y = x;
-    rep(i,4) rep(j,4) y.at(3-j).at(i) = x.at(i).at(j);
-    x = y;
+    rep(i,4) rep(j,4) y.at(i).at(j) = x.at(3-j).at(i);
+    return y;
 }
 
 // 座標圧縮
