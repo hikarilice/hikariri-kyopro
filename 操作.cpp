@@ -1,9 +1,13 @@
 
 // グリッドを時計回りに90°回転させる
 // x = rotate(x); みたいに使う
+// グリッドは正方形じゃないとダメ
 vector<string> rotate(vector<string> x){
     auto y = x;
-    rep(i,4) rep(j,4) y.at(i).at(j) = x.at(3-j).at(i);
+    ll n = x.size();
+    rep(i,n)rep(j,n) y.at(i).at(j) = x.at(n-1-j).at(i);
+    // ↓ 反時計回り
+    // rep(i,n)rep(j,n) y.at(n-1-j).at(i) = x.at(i).at(j);
     return y;
 }
 
