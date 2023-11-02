@@ -14,7 +14,6 @@ const ll MOD = 998244353; //const ll MOD = 1e9+7;
 #define REP(i,n,m) for(ll i=(ll)(n);i<=(ll)(m);i++)
 #define all(x) x.begin(),x.end()
 #define rall(x) x.rbegin(),x.rend()
-// priority_queue<型, vector<型>, greater<型>> q; //小さい順
 template<typename T> bool chmin(T& a,T b){if(a>b){a=b;return true;}return false;}
 template<typename T> bool chmax(T& a,T b){if(a<b){a=b;return true;}return false;}
 void yorn(bool ans){cout<<(ans?"Yes":"No")<<endl;return;}
@@ -24,6 +23,7 @@ template<class T> void vpout(T v){for(auto [i,j]:v)cout<<'('<<i<<','<<j<<')';cou
 vector<ll> dy = {1,-1,0,0}; vector<ll> dx = {0,0,1,-1};
 vector<ll> dy2 = {-1,1,1,-1}; vector<ll> dx2 = {1,1,-1,-1};
 bool in(ll a,ll x,ll y){return x<=a&&a<=y;}
+// priority_queue<型, vector<型>, greater<型>> q; //小さい順
 
 int main(){
     
