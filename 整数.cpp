@@ -16,6 +16,18 @@ ll moddiv(ll a, ll b, ll m){
     return a * modpow(b,m-2,m) % m;
 }
 
+// combination (modpow,moddivとセット)
+// 計算量は O(NlogN)?
+// r=0 の時、ret=1 に注意
+ll combi(ll n,ll r, ll m){
+    ll ret = 1;
+    //if(r==0) return 1;
+    rep1(i,n) ret = ret*i%m;
+    rep1(i,r) ret = moddiv(ret,i,m);
+    rep1(i,n-r) ret = moddiv(ret,i,m);
+    return ret%m;
+}
+
 // 素数判定
 bool isPrime(ll x){
     for(ll i=2;i*i<=x;i++){
