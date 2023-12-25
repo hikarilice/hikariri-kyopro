@@ -8,13 +8,13 @@ ll modpow(ll a, ll b, ll m){
         if((b/wari)%2==1) ans = ans * p % m;
         p = p * p % m;
     }
-    return ans;
+    return ans % m;
 }
 
 // 分数a/b のmod (modpowとセット)
 // フェルマーの小定理
 ll moddiv(ll a, ll b, ll m){
-    return a * modpow(b,m-2,m) % m;
+    return a % m * modpow(b,m-2,m) % m;
 }
 
 // combination (modpow,moddivとセット)
