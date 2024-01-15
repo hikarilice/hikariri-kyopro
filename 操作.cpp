@@ -31,3 +31,11 @@ template<class T> ll mex(T v){
     rep(i,v.size()) if(!x.at(i)) return i;
     return v.size();
 }
+
+// 二次元累積和
+// 左上が(i,j)、右上が(I,J)の四角形
+// デカルト座標的には左下(i,j)右上(I,J)
+// 累積和なので、1-indexedにするの注意！！
+ll ruiseki_2d(vvl &g,ll i,ll j,ll I,ll J){
+    return g.at(i-1).at(j-1)+g.at(I).at(J)-g.at(i-1).at(J)-g.at(I).at(j-1);
+}
