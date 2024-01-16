@@ -7,7 +7,7 @@ typedef modint998244353 mint;
 #endif
 typedef long long ll; typedef long double ld; typedef pair<int,int> pii; typedef pair<ll,ll> pll;
 typedef vector<ll> vl; typedef vector<vl> vvl; typedef vector<vvl> vvvl;
-typedef vector<ld> vld; typedef vector<vld> vvld;
+typedef vector<ld> vld; typedef vector<vld> vvld; typedef vector<pll> vpl;
 const int INF = 1e9; const long long LINF = 1e18;
 const ll MOD = 998244353; //const ll MOD = 1e9+7;
 #define rep(i,n) for(ll i=0;i<(ll)(n);i++)
