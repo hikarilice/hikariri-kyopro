@@ -20,7 +20,7 @@ ll moddiv(ll a, ll b, ll m){
 // combination (modpow,moddivとセット)
 // 計算量は O(NlogN)?
 // r=0 の時、ret=1 に注意
-ll combi(ll n,　ll r,　ll m){
+ll combi(ll n, ll r, ll m){
     ll ret = 1;
     rep1(i,n) ret = ret*i%m;
     rep1(i,r) ret = moddiv(ret,i,m);
