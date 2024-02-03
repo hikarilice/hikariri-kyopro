@@ -61,7 +61,3 @@ map<ll,ll> prime_factor(ll x) {
   if(x!=1) ret[x] = 1;
   return ret;
 }
-
-int main(){
-    return 0;
-}
