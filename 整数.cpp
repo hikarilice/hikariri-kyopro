@@ -61,3 +61,20 @@ map<ll,ll> prime_factor(ll x) {
   if(x!=1) ret[x] = 1;
   return ret;
 }
+
+// 拡張ユークリッド互除法
+// 返り値は、gcd(a,b)
+// ax + by = gcd(a,b) を満たす (x,y) が格納される
+// 出典:けんちょんの記事(https://qiita.com/drken/items/b97ff231e43bce50199a)
+// ll x,y; // と宣言してから使う
+ll extGCD(ll a,ll b, ll &x,ll &y){
+    // いちばん下まで行ってから、x,yを再帰的に構成する
+    if(b==0){
+        x = 1;
+        y = 0;
+        return a;
+    }
+    ll d = extGCD(b,a%b, y,x);
+    y -= a/b * x;
+    return d;
+}
